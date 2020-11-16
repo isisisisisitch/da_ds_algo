@@ -1,10 +1,10 @@
-package ca.bytetube._02_arrayList.leetcode;
+package ca.bytetube._00_leetcode;
 
 /**
  * https://leetcode.com/problems/sort-colors/
  * @author dal
  */
-public class lc_02_SortColors {
+public class lc_arraylist_02_SortColors {
     /*
     总思路：partition
     步骤：

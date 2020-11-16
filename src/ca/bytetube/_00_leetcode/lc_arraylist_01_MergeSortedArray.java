@@ -1,10 +1,10 @@
-package ca.bytetube._02_arrayList.leetcode;
+package ca.bytetube._00_leetcode;
 
 /**
  * https://leetcode.com/problems/merge-sorted-array/
  * @author dal
  */
-public class lc_01_MergeSortedArray {
+public class lc_arraylist_01_MergeSortedArray {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int i1 = m - 1;
         int i2 = n - 1;
