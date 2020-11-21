@@ -1,16 +1,12 @@
 package ca.bytetube._00_leetcode;
 
+import ca.bytetube._00_leetcode.common.ListNode;
+
 /**
  * https://leetcode.com/problems/delete-node-in-a-linked-list/
  * @author dal
  */
 public class lc_linkedList_01_DeleteNodeInLinkedList {
-
-      public class ListNode {
-          int val;
-          ListNode next;
-          ListNode(int x) { val = x; }
-      }
 
     public void deleteNode(ListNode node) {
         if (node == null || node.next == null) return;

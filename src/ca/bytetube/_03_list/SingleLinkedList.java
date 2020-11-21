@@ -1,6 +1,6 @@
 package ca.bytetube._03_list;
 
-public class LinkedList<E> extends AbstractList<E> {
+public class SingleLinkedList<E> extends AbstractList<E> {
     private Node<E> first;
 
 

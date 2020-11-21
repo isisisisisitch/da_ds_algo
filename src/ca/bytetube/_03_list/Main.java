@@ -5,7 +5,7 @@ package ca.bytetube._03_list;
 public class Main {
 
     public static void main(String[] args) {
-        List<Integer> list = new LinkedList<>();
+        List<Integer> list = new SingleLinkedList<>();
 
         list.add(10);
         list.add(11);
