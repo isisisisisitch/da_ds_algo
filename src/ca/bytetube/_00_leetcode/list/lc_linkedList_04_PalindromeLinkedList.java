@@ -1,4 +1,4 @@
-package ca.bytetube._00_leetcode;
+package ca.bytetube._00_leetcode.list;
 
 import ca.bytetube._00_leetcode.common.ListNode;
 
