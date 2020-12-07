@@ -1,7 +1,6 @@
-package ca.bytetube._00_leetcode.list;
+package ca.bytetube._00_leetcode._01_list;
 
 import ca.bytetube._00_leetcode.common.ListNode;
-import ca.bytetube._03_list.List;
 
 /**
  * https://leetcode.com/problems/sort-colors/

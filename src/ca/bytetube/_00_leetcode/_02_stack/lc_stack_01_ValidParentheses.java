@@ -1,4 +1,4 @@
-package ca.bytetube._00_leetcode.stack;
+package ca.bytetube._00_leetcode._02_stack;
 
 import java.util.HashMap;
 import java.util.Stack;

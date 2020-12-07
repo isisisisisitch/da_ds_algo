@@ -1,4 +1,5 @@
-package ca.bytetube._04_stack.list;
+package ca.bytetube._05_queue.list;
+
 
 public abstract class AbstractList<E> implements List<E> {
     protected int size;

@@ -1,7 +1,5 @@
-package ca.bytetube._00_leetcode.stack;
+package ca.bytetube._00_leetcode._02_stack;
 
-
-import java.util.Stack;
 
 /**
  * https://leetcode.com/problems/min-stack/
