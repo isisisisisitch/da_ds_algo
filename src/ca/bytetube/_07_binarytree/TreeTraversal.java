@@ -1,5 +1,7 @@
 package ca.bytetube._07_binarytree;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class TreeTraversal {
@@ -75,6 +77,67 @@ public class TreeTraversal {
         }
     }
 
+    public static void postOrderTraversalByRecursion(Node node){
+        if (node == null) return;
+        //left
+        postOrderTraversalByRecursion(node.left);
+        //right
+        postOrderTraversalByRecursion(node.right);
+        //current
+        System.out.print(node.value+" ");
+
+    }
+
+    public static void postOrderTraversalByLoop(Node node){
+        if (node != null) {
+            Stack<Node> stack1 = new Stack<>();
+            Stack<Node> stack2 = new Stack<>();
+            stack1.push(node);
+
+            while (!stack1.isEmpty()){
+                Node pop = stack1.pop();
+                stack2.push(pop);
+                //System.out.print(pop.value+" ");
+
+                //当前节点有左先压左
+                if (pop.left != null) {
+                    stack1.push(pop.left);
+                }
+                //当前节点有右再压右
+                if (pop.right != null) {
+                    stack1.push(pop.right);
+                }
+            }
+
+            while (!stack2.isEmpty()){
+                Node pop = stack2.pop();
+                System.out.print(pop.value+" ");
+            }
+
+        }
+    }
+
+
+    public static void levelOrderTraversal(Node node){
+        if (node != null) {
+            Queue<Node> queue = new LinkedList<>();
+            queue.offer(node);
+            while (!queue.isEmpty()){
+                Node poll = queue.poll();
+                System.out.print(poll.value+" ");
+
+                if (poll.left != null) {
+                    queue.offer(poll.left);
+                }
+
+                if (poll.right != null) {
+                    queue.offer(poll.right);
+                }
+            }
+        }
+    }
+
+
 
 
     public static void main(String[] args) {
@@ -85,10 +148,10 @@ public class TreeTraversal {
         root.left.right = new Node(5);
         root.left.left.left = new Node(1);
         root.left.left.right = new Node(3);
-        InOrderTraversalByRecursion(root);
+       // postOrderTraversalByRecursion(root);
         System.out.println();
         System.out.println("=================");
-        InOrderTraversalByLoop(root);
+        levelOrderTraversal(root);
 
     }
 
