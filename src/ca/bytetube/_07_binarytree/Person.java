@@ -1,6 +1,6 @@
 package ca.bytetube._07_binarytree;
 
-public class Person implements Comparable<Person>{
+public class Person {
     int age;
     String name;
 
@@ -30,10 +30,7 @@ public class Person implements Comparable<Person>{
         this.name = name;
     }
 
-    @Override
-    public int compareTo(Person o) {
-        return this.age-o.age;
-    }
+
 
 
     @Override
