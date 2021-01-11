@@ -84,7 +84,7 @@ public class BinarySearchTree<E> implements BinaryTreeInfo {
 	}
 	private void elementNotNullCheck(E element) {
 		if (element == null) {
-			throw new IllegalArgumentException("elment must not be null");
+			throw new IllegalArgumentException("element must not be null");
 		}
 	}
 
@@ -128,9 +128,44 @@ public class BinarySearchTree<E> implements BinaryTreeInfo {
 
 
 	public void remove(E element){
-
+		remove(node(element));
 	}
 
+	private void remove(Node<E> node){
+		if (node == null) return;
+
+		size--;
+		//remove degree 2
+		if (node.left != null && node.right != null) {
+			Node<E> s = successor(node);
+			node.element = s.element;
+			node = s;
+		}
+		Node<E> replaceNode = node.left != null ? node.left : node.right;
+		//remove degree 1
+		if (replaceNode != null) {
+			//update parent
+			replaceNode.parent = node.parent;
+			//update child
+			if (node.parent == null) {//node == root
+				root = replaceNode;
+			}else if (node == node.parent.left) {
+				node.parent.left = replaceNode;
+			}else {
+				node.parent.right = replaceNode;
+			}
+		}
+		//remove degree 0
+		else if (node.parent == null) {//node == root
+			root = null;
+		}else {
+			if (node == node.parent.left) {
+				node.parent.left = null;
+			}else {
+				node.parent.right = null;
+			}
+		}
+	}
 
 
 
