@@ -14,7 +14,7 @@ public class PrintZ {
             printDiagonal(matrix,aR,aC,bR,bC,fromUp);
 
             //对a,b点做判断
-            //只要a点没有来到最后一列时，a的行号不变
+            //只要a点没有来到最后一列时，a的行号不变,来到最后一列时，a的行号不断+1
             aR = aC == endC ? aR + 1: aR;
             //只要a点没有来到最后一列时，a的列号不断+1，来到最后一列时，a的列号不变
             aC = aC == endC ? aC : aC + 1;

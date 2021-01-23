@@ -42,8 +42,6 @@ public class SpiralMatrix {
             }
             left++;
         }
-
-
         return res;
     }
 }
