@@ -1,24 +1,25 @@
-package ca.bytetube._10_recursion.fib;
+package ca.bytetube._10_recursion_dp.fib;
 
-public class ClimbStairs {
-    public static int climbStairs0(int n){//2^n
+public class Fib {
+    public static int fib0(int n){//2^n
         if (n <= 1)  return n;
-        return climbStairs0(n-1)+ climbStairs0(n-2);
+
+        return fib0(n-1)+ fib0(n-2);
         
     }
 
-    public static int climbStairs1(int n){
+    public static int fib1(int n){
         if (n <= 1)  return n;
         int[] array = new int[n + 1];
         array[1] = 1;
         array[2] = 1;
-       return climbStairs1(array,n);
+       return fib1(array,n);
 
     }
 
-    private static int climbStairs1(int[] array,int n){
+    private static int fib1(int[] array,int n){
         if (array[n] == 0) {//说明第n项的值没有求过
-            array[n] = climbStairs1(array,n-1) + climbStairs1(array,n-2);
+            array[n] = fib1(array,n-1) + fib1(array,n-2);
         }
         return array[n];
     }
@@ -26,14 +27,14 @@ public class ClimbStairs {
 
     /*
      * 滚动数组
-     *climbStairs(3)---> n = 3     3%2 = 1
-     * climbStairs(4)---> n = 4    4%2 = 0
+     *fib(3)---> n = 3     3%2 = 1
+     * fib(4)---> n = 4    4%2 = 0
      *
-     * climbStairs(5)---> n = 5  5% 2 = 1
-     * climbStairs(6) ---> n = 6 6% 2 = 0
+     * fib(5)---> n = 5  5% 2 = 1
+     * fib(6) ---> n = 6 6% 2 = 0
      *
      */
-    public static int climbStairs2(int n){
+    public static int fib2(int n){
         if (n <= 1)  return n;
         int[] array = new int[2];
         array[0] = 1;
@@ -45,7 +46,7 @@ public class ClimbStairs {
         return array[n&1];
     }
 
-    public static int climbStairs(int n){
+    public static int fib(int n){
         if (n <= 1) return n;
         int first = 0;
         int second = 1;
@@ -60,6 +61,6 @@ public class ClimbStairs {
     }
 
     public static void main(String[] args) {
-        climbStairs(3);
+        fib(3);
     }
 }

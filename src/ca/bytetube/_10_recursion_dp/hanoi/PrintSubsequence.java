@@ -1,4 +1,4 @@
-package ca.bytetube._10_recursion.hanoi;
+package ca.bytetube._10_recursion_dp.hanoi;
 
 public class PrintSubsequence {
     public static void main(String[] args) {

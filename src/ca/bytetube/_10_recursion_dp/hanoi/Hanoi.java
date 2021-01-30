@@ -1,4 +1,4 @@
-package ca.bytetube._10_recursion.hanoi;
+package ca.bytetube._10_recursion_dp.hanoi;
 
 /**
  * 其实分2 种情况讨论即可
